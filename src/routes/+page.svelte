@@ -15,24 +15,6 @@
         <div class="bg-white p-6 rounded-lg shadow-lg w-full">
             <h2 class="text-2xl text-slate-800 font-bold">🗒️ Describe the job</h2>
             <div class="p-4 rounded-lg mt-4 shadow-sm">
-                <ul>
-                    {#each chat.messages as message, messageIndex (messageIndex)}
-                      <li>
-                        <div>{message.role}</div>
-                        <div>
-                          {#each message.parts as part, partIndex (partIndex)}
-                            {#if part.type === 'text'}
-                              <div>{part.text}</div>
-                            {/if}
-                          {/each}
-                        </div>
-                      </li>
-                    {/each}
-                </ul>
-                <form onsubmit={chat.handleSubmit}>
-                    <input bind:value={chat.input} />
-                    <button type="submit">Send</button>
-                </form>
                 <Textarea />
             </div>
         </div>
