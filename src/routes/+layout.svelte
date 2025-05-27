@@ -3,15 +3,11 @@
 	import Header from '$lib/components/layout/Header.svelte';
 	// import Header from './Header.svelte';
 	// import Footer from './Footer.svelte';
-	
+
 	let { children } = $props();
 </script>
 
-<div class="flex flex-col min-h-screen bg-background-color">
+<div class="bg-background-color flex min-h-screen flex-col">
 	<Header />
 	{@render children()}
 </div>
-
-
-	
-
